@@ -1,0 +1,17 @@
+IglooScore1.java Errors:
+	* The logic in the function overallScore() was incorrect. This function is supposed to 
+	compare the three scores and add the two highest scores (it drops the lowest score). Originally the function was written so that is the first score is less than the second 
+	score then the score to be dropped is set to equal to the second score. It also was written so that if the second score was less than the first score then the score to be dropped was set to equal the first score. This means that if the lowest score was either the first or second score, the overall score would be calculated incorrectly. To
+	fix this, I changed the function so that is the first score is less than the second score the score to be dropped is set to the first score. And if the second score is less
+	than the first score then the score to be dropped is set to the second score.
+
+IglooScore2.java Errors:
+	* The logic in the funciton overallScore() is incorrect. This function was suppored to 
+	compare the three scores and add the two highest scores (it drops the lowest score). 
+	Originally the functio did not work properly for score calcuations where two are the same value and they are less than the other score (i.e. - 8 8 9, 7 5 5, etc.). To fix this I added a few if else statements where I checked to see if score1 and score2 were the same or score1 and score3 or score2 and score3. In these if else statements I add one of the scores with the same value to the score with the different larger value. 
+
+	* The logic used in line 58 [if (args==null || args.length != 3)] is incorrect. When conducting coverage tests, we need to ensure that every possible logical outcome is 
+	tested. We can create a test where args==null is ture and args.length != 3 is false or
+	args==null is false and args.length != 3 is true, but we can't create a test where both 
+	conditions are false. Therefor, we need to to separate this one if statement into an
+	if else statement.
